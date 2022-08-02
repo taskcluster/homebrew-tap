@@ -1,6 +1,6 @@
 class Taskcluster < Formula
-  desc "CI for Engineers"
-  homepage "https://taskcluster.net"
+  desc "A Taskcluster client library for the command line"
+  homepage "https://github.com/taskcluster/taskcluster/tree/main/clients/client-shell"
   version "v44.17.2"
   license "MPL-2.0"
 
