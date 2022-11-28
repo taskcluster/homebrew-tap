@@ -1,0 +1,23 @@
+---
+loader: taskgraph.loader.transform:loader
+
+transforms:
+  - taskgraph.transforms.job:transforms
+  - taskgraph.transforms.task:transforms
+
+tasks:
+  tests:
+    description: brew {audit, install, test}
+    worker-type: ci
+    worker:
+      max-run-time: 300
+      docker-image:
+        in-tree: homebrew
+    run:
+      using: run-task
+      cwd: '{checkout}'
+      cache-dotcache: true
+      command: >-
+        brew audit --strict --online --formula ./Formula/taskcluster.rb &&
+        brew install --formula ./Formula/taskcluster.rb &&
+        brew test ./Formula/taskcluster.rb

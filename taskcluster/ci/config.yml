@@ -1,0 +1,25 @@
+---
+trust-domain: homebrew
+treeherder:
+  group-names:
+    'I': 'Docker Image Builds'
+
+task-priority: low
+
+taskgraph:
+  repositories:
+    ci:
+      name: homebrew
+
+workers:
+  aliases:
+    images:
+      provisioner: proj-taskcluster
+      os: linux
+      implementation: docker-worker
+      worker-type: ci
+    ci:
+      provisioner: proj-taskcluster
+      os: linux
+      implementation: docker-worker
+      worker-type: ci

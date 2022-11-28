@@ -27,6 +27,23 @@ brew install taskcluster/tap/taskcluster
 brew install taskcluster
 ```
 
+### Testing Formulae
+
+To test any changes to a specific formula, such as `taskcluster`, you can use the following commands:
+
+```bash
+# check formula for Homebrew coding style violations
+brew audit --strict --online --formula ./Formula/taskcluster.rb
+```
+```bash
+# check to be sure formula can be installed still
+brew install --formula ./Formula/taskcluster.rb
+```
+```bash
+# run tests for formula
+brew test --verbose ./Formula/taskcluster.rb
+```
+
 ### Uninstalling Formulae
 
 To uninstall a specific formula, such as `taskcluster`, you can use the following command:
