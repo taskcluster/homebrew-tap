@@ -1,20 +1,20 @@
 class Taskcluster < Formula
   desc "A Taskcluster client library for the command line"
   homepage "https://github.com/taskcluster/taskcluster/tree/main/clients/client-shell"
-  version "v44.17.2"
+  version "v46.1.0"
   license "MPL-2.0"
 
   if OS.mac?
     if Hardware::CPU.physical_cpu_arm64?
       url "https://github.com/taskcluster/taskcluster/releases/download/#{version}/taskcluster-darwin-arm64", :using => :curl
-      sha256 "1ccf56972988f45c88e9a21a536728f1064eabef49a9d085e16ac41db14214a5"
+      sha256 "ed49eccc04b0658eab84ddff47fba0b8f5141611289112035f9e7f5fce537704"
     else
       url "https://github.com/taskcluster/taskcluster/releases/download/#{version}/taskcluster-darwin-amd64", :using => :curl
-      sha256 "7897baf6c27350e5a6fe46e93f9bb4890f5dd98a117196acfb4267e639624a5c"
+      sha256 "ba93e5142ec4246eea5265853647f2e13f2838f0e59a5186b735f132b55bbc53"
     end
   elsif OS.linux?
     url "https://github.com/taskcluster/taskcluster/releases/download/#{version}/taskcluster-linux-amd64", :using => :curl
-    sha256 "d12b40c048e96bd5376f9d28c4831075ee6b74b3c8b9bd3d85f57cc1a9ec1971"
+    sha256 "6a782a82adeb382f1539a36125c84e52cdaa7a19aa99d36763f303002829efac"
   end
 
   def install
