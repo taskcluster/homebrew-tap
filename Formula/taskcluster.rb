@@ -11,7 +11,7 @@ class Taskcluster < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/taskcluster/taskcluster/releases/download/v55.2.0/taskcluster-darwin-arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "cc4570e52b32b1568db742a8113d51b0698f1d939695a58c637f917fd3040080"
+      sha256 "f1676d616ac5912bc1bf049d09210df100b8f11145d03f450af3c5e50933c027"
 
       def install
         bin.install "taskcluster"
@@ -19,7 +19,7 @@ class Taskcluster < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/taskcluster/taskcluster/releases/download/v55.2.0/taskcluster-darwin-amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "b6b0ce90ad4644e93a685a7bb5374086864ee0211000bae5d8aae7fdaa1df12e"
+      sha256 "96b016349e83719cf7c64502bd72922a3e51dfd56497a978fec23d4f0b4e7e34"
 
       def install
         bin.install "taskcluster"
@@ -28,17 +28,17 @@ class Taskcluster < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/taskcluster/taskcluster/releases/download/v55.2.0/taskcluster-linux-amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "ffabfb5015a23801bc6383726e2f20dd68ef4ea25f2cffa04f9eda2cc8981735"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/taskcluster/taskcluster/releases/download/v55.2.0/taskcluster-linux-arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "49104e99aecbdd4b67952c94a6ed7a81f5562c50cf1fab04e0682fb454d5ee2a"
 
       def install
         bin.install "taskcluster"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/taskcluster/taskcluster/releases/download/v55.2.0/taskcluster-linux-arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "178d04ab21dbd8b42686dbdaaaeed604b5c7a3cfb8ad58a72b71cb830ae94922"
+    if Hardware::CPU.intel?
+      url "https://github.com/taskcluster/taskcluster/releases/download/v55.2.0/taskcluster-linux-amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "d59223f5de4f7022fadfedb02bccbc9c3631572c3bbf671dfcb1233dd0294c75"
 
       def install
         bin.install "taskcluster"
