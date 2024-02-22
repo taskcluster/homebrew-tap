@@ -5,21 +5,21 @@
 class Taskcluster < Formula
   desc "A Taskcluster client library for the command line"
   homepage "https://github.com/taskcluster/taskcluster/tree/main/clients/client-shell"
-  version "60.3.5"
+  version "60.4.0"
   license "MPL-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/taskcluster/taskcluster/releases/download/v60.3.5/taskcluster-darwin-amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "71c85b09d8cbf097a804993baadf699fb63c2f33a70b75fc629ffcf9e8ddea1d"
+    if Hardware::CPU.arm?
+      url "https://github.com/taskcluster/taskcluster/releases/download/v60.4.0/taskcluster-darwin-arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "60dff767b4cf05ee1090b2bb9bc35bfa139a6956b12f809b764ee3db199a9ae1"
 
       def install
         bin.install "taskcluster"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/taskcluster/taskcluster/releases/download/v60.3.5/taskcluster-darwin-arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "ba5674800533170f22e287e79dfa9da66f145f2334e1201584e1a867713571a7"
+    if Hardware::CPU.intel?
+      url "https://github.com/taskcluster/taskcluster/releases/download/v60.4.0/taskcluster-darwin-amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "5e0b0cbff6c7078155453bce7ec60db2ef4d634b7944b99fade40b3273d7e912"
 
       def install
         bin.install "taskcluster"
@@ -29,16 +29,16 @@ class Taskcluster < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/taskcluster/taskcluster/releases/download/v60.3.5/taskcluster-linux-amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "f0acc23586da4579605a78c5a6120afc37f56b7fe95c23a4f6a2dcbad7c1f391"
+      url "https://github.com/taskcluster/taskcluster/releases/download/v60.4.0/taskcluster-linux-amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "59d5e1726a2e6c4a6acbb187aacbe4dd0da103d35e99593c8af294f180ffd085"
 
       def install
         bin.install "taskcluster"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/taskcluster/taskcluster/releases/download/v60.3.5/taskcluster-linux-arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "fe6631ed454fec5683d5b147f08f166cbf0fd56e3eb20b8a3433d25b7532d6dc"
+      url "https://github.com/taskcluster/taskcluster/releases/download/v60.4.0/taskcluster-linux-arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "67ee032bc0ab861832f7c31406b357926a73c46c1963fd6df90d030066c9bf36"
 
       def install
         bin.install "taskcluster"
