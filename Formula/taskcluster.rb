@@ -11,7 +11,7 @@ class Taskcluster < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/taskcluster/taskcluster/releases/download/v70.0.0/taskcluster-darwin-arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "4bc8fd26cedcbb463dabb5255f0740006a27d5731165c33cb1c7d6a61c5b442e"
+      sha256 "3c2f836e7416d9ac3dea24a9ca5520be2edc7e1aabc89368b8d99fa3ea95a4e5"
 
       def install
         bin.install "taskcluster"
@@ -19,7 +19,7 @@ class Taskcluster < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/taskcluster/taskcluster/releases/download/v70.0.0/taskcluster-darwin-amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "92660b6dbd74c5f5debd1f9ea7ea3c31d7d399f725e1266a2598f67f0c13025f"
+      sha256 "343acbd0706d86303ac11d78d0dd5b6f819bc5b8cd6e93f296c9db91c80f0bbd"
 
       def install
         bin.install "taskcluster"
@@ -30,7 +30,7 @@ class Taskcluster < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/taskcluster/taskcluster/releases/download/v70.0.0/taskcluster-linux-arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "8319dc3a0d32edb1c6148a86d64f5529d315dc9841da580d775e72f7b36f91ea"
+      sha256 "af10921d11efce4edef3e0e777f7eae52f481ab7d622a10098af3146c01a9a59"
 
       def install
         bin.install "taskcluster"
@@ -38,7 +38,7 @@ class Taskcluster < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/taskcluster/taskcluster/releases/download/v70.0.0/taskcluster-linux-amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "58e03e85ab20e7f600f631cd83f8adc500534afb1895a6b3362c2248f480f697"
+      sha256 "8d6dcd359aaa7d6777efe0a60ae0078650e79bac5437c7210137e22ddbe03fa8"
 
       def install
         bin.install "taskcluster"
