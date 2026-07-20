@@ -4,12 +4,12 @@ cask "taskcluster" do
 
   on_macos do
     on_intel do
-      sha256 "4a43efecccd1a2d481f51cdf54491f9c0e023a586298b6c93513446c3cf3dd31"
+      sha256 "b59e17f1b2208202ae218961d7b51ff360cc2ebd72b9fa2547833f2ec14a8198"
       url "https://github.com/taskcluster/taskcluster/releases/download/v#{version}/taskcluster-darwin-amd64.tar.gz",
         verified: "github.com/taskcluster/taskcluster/"
     end
     on_arm do
-      sha256 "42d48a77e516714f4c1523861e6d87ca3aee85f97ab977512988fa2ef9e55c07"
+      sha256 "a83f442b29c91d1a9d9b0da1420229828af77f359f7c2a07c979291d66a288c8"
       url "https://github.com/taskcluster/taskcluster/releases/download/v#{version}/taskcluster-darwin-arm64.tar.gz",
         verified: "github.com/taskcluster/taskcluster/"
     end
@@ -17,12 +17,12 @@ cask "taskcluster" do
 
   on_linux do
     on_intel do
-      sha256 "4054deaec59b493e9253d767c40447ee2a2d78baf7ed9082176d6d20010cb042"
+      sha256 "861d7b889866d3b71385da68c267c386ca57a8987f1c55493693ea1bc3c62f19"
       url "https://github.com/taskcluster/taskcluster/releases/download/v#{version}/taskcluster-linux-amd64.tar.gz",
         verified: "github.com/taskcluster/taskcluster/"
     end
     on_arm do
-      sha256 "041490bf4b760e9c5fbda927e2cac1af764fe6cee7cb638ac2efa88b90c7189d"
+      sha256 "a225b5fe19b030b927d3fd3d7d9cebe06fd07524737396fbb8dd59f506dd5593"
       url "https://github.com/taskcluster/taskcluster/releases/download/v#{version}/taskcluster-linux-arm64.tar.gz",
         verified: "github.com/taskcluster/taskcluster/"
     end
